@@ -1,0 +1,579 @@
+           <!-- <div class="menu">
+                    <table>
+                        <tr>
+                            <td>
+                                <h4><label for="">Mục Lục</label></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A1">Công Nghệ Thông Tin (Kỹ Sư)</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A2">Công Nghệ Thông Tin (Cử Nhân)</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A3">Công Nghệ Thông Tin (Đặc Thù)</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A4">Trí Tuệ Nhân Tạo</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A5">Chương Trình Toàn Cầu Ngành CNTT</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A6">Công Nghệ Kĩ Thuật Máy Tính (Kĩ Sư)</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A7">Công Nghệ Kĩ Thuật Máy Tính (Cử Nhân)</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A8">Chuyên Ngành Mạng Và AN Toàn Thông Tin</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A9">Quản Trị Kinh Doanh</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A10">Quản Trị Du Lịch và Lữ Hành Số</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A11">Quản Trị Tài Chính Số</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A12">Chuyên ngành Quản trị Logistics & Chuỗi cung ứng số</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A13">Quản trị Dự án Công nghệ Thông tin</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A14">Quản trị kinh doanh - Chuyên ngành Marketing kỹ thuật số</a></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4><a href="#A15">Chuyên ngành Thiết kế mỹ thuật số</a></h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div> -->
+
+
+.container
+  height: 100vh
+  width: 100vw
+  max-height: 800px
+  max-width: 1280px
+  min-height: 600px
+  min-width: 1000px
+  display: flex
+  justify-content: space-around
+  align-items: center
+  margin: 0 auto
+
+.border
+  height: 369px
+  width: 290px
+  background: transparent
+  border-radius: 10px
+  transition: border 1s
+  position: relative
+
+  &:hover
+    border: 1px solid white
+
+.card
+  height: 379px
+  width: 300px
+  background: grey
+  border-radius: 10px
+  transition: background 0.8s
+  overflow: hidden
+  background: black
+  box-shadow: 0 70px 63px -60px #000000
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+
+.card0
+  background: url('https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg') center center no-repeat
+  background-size: 300px
+
+  &:hover
+    background: url('https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg') left center no-repeat
+    background-size: 600px
+
+    h2
+      opacity: 1
+
+    .fa
+      opacity: 1
+
+.card1
+  background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg') center center no-repeat
+  background-size: 300px
+
+  &:hover
+    background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg') left center no-repeat
+    background-size: 600px
+
+    h2
+      opacity: 1
+
+    .fa
+      opacity: 1
+
+.card2
+  background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg') center center no-repeat
+  background-size: 300px
+
+  &:hover
+    background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg') left center no-repeat
+    background-size: 600px
+
+    h2
+      opacity: 1
+
+    .fa
+      opacity: 1
+
+h2
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+  color: white
+  margin: 20px
+  opacity: 0
+  transition: opacity 1s
+
+.fa
+  opacity: 0
+  transition: opacity 1s
+
+.icons
+  position: absolute
+  fill: #fff
+  color: #fff
+  height: 130px
+  top: 226px
+  width: 50px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around
+
+
+
+
+
+
+
+<div class="container">
+  <div class="card card0">
+    <div class="border">
+      <h2>Al Pacino</h2>
+      <div class="icons">
+        <i class="fa fa-codepen" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <i class="fa fa-dribbble" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+  <div class="card card1">
+    <div class="border">
+      <h2>Ben Stiller</h2>
+      <div class="icons">
+        <i class="fa fa-codepen" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <i class="fa fa-dribbble" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+  <div class="card card2">
+    <div class="border">
+      <h2>Patrick Stewart</h2>
+      <div class="icons">
+        <i class="fa fa-codepen" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <i class="fa fa-dribbble" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+
+
+
+
+/*Card 2*/
+
+<div class="container">
+  <div class="card">
+    <div class="imgBx">
+      <img src="https://assets.codepen.io/4164355/shoes.png">
+    </div>
+    <div class="contentBx">
+      <h2>Nike Shoes</h2>
+      <div class="size">
+        <h3>Size :</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="color">
+        <h3>Color :</h3>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a href="#">Buy Now</a>
+    </div>
+  </div>
+</div>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #131313;
+}
+
+.container{
+  position: relative;
+}
+
+.container .card{
+  position: relative;
+  width: 320px;
+  height: 450px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container .card:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9bdc28;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.container .card:hover:before{
+  clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:after{
+  content: 'Nike';
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255,255,25,0.05)
+}
+
+.container .card .imgBx{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.container .card:hover .imgBx{
+  top: 0%;
+  transform: translateY(0%);
+    
+}
+
+.container .card .imgBx img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  width: 270px;
+}
+
+.container .card .contentBx{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+
+.container .card:hover .contentBx{
+  height: 210px;
+}
+
+.container .card .contentBx h2{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0;
+}
+
+.container .card .contentBx .size, .container .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container .card:hover .contentBx .size{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.container .card:hover .contentBx .color{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+.container .card .contentBx .size h3, .container .card .contentBx .color h3{
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.container .card .contentBx .size span{
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container .card .contentBx .size span:hover{
+  background: #9bdc28;
+}
+
+.container .card .contentBx .color span{
+  width: 20px;
+  height: 20px;
+  background: #ff0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.container .card .contentBx .color span:nth-child(2){
+  background: #9bdc28;
+}
+
+.container .card .contentBx .color span:nth-child(3){
+  background: #03a9f4;
+}
+
+.container .card .contentBx .color span:nth-child(4){
+  background: #e91e63;
+}
+
+.container .card .contentBx a{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  margin-top: 0;
+}
+
+.container .card:hover .contentBx a{
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+  
+}
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  img {
+    margin-left: 8%;
+    margin-top: 20px;
+  }
+  .img1 {
+    height: 35em;
+    width: 60em;
+    margin-left: 8%;
+    margin-top: 20px;
+  }
+  .img2 {
+    margin-left: 30%;
+    margin-top: 20px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  img {
+    margin-left: 8%;
+    margin-top: 20px;
+  }
+  .img1 {
+    height: 35em;
+    width: 60em;
+    margin-left: 8%;
+    margin-top: 20px;
+  }
+  .img2 {
+    margin-left: 30%;
+    margin-top: 20px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  img {
+    margin-left: 8%;
+    margin-top: 20px;
+  }
+  .img1 {
+    height: 35em;
+    width: 60em;
+    margin-left: 8%;
+    margin-top: 20px;
+  }
+  .img2 {
+    margin-left: 30%;
+    margin-top: 20px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  img {
+    left: 0;
+    margin-top: 20px;
+  }
+  /* .img1 {
+    height: 35em;
+    width: 60em;
+    margin-left: 8%;
+    margin-top: 20px;
+  }
+  .img2 {
+    margin-left: 30%;
+    margin-top: 20px;
+  } */
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  img {
+    margin-left: 8%;
+    margin-top: 20px;
+  }
+  .img1 {
+    height: 35em;
+    width: 60em;
+    margin-left: 8%;
+    margin-top: 20px;
+  }
+  .img2 {
+    margin-left: 30%;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+}
+
+
+
+
+
+                            <!--Form login-->
+
+                            <button id="login-button" class="btn btn-primary">Đăng nhập</button>
+
+                            <div id="login-form" class="login-form">
+                                <h2>Đăng nhập</h2>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Tên đăng nhập</label>
+                                        <input type="text" class="form-control" id="username"
+                                            placeholder="Nhập tên đăng nhập">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Mật khẩu</label>
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Nhập mật khẩu">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                </form>
+                            </div>

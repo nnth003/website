@@ -1,0 +1,100 @@
+body {
+  /* background-color: #49c5b6; */
+  /* background-color: #116466; */
+  font-family: "Times New Roman", Times, serif;
+  /* background-image: url('/Webdesign/Images/back.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%; */
+  padding-top: 60px;
+}
+
+header {
+  display: block;
+  list-style-type: none;
+  overflow: hidden;
+  border: 0px solid #000;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  /* background-color: #E27D60; */
+  /* background-color: #999999; */
+  background-color: #1e201f;
+  /* background-color: black; */
+}
+
+header li {
+  float: left;
+}
+
+header li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: xx-large;
+  /* animation-name: ex;
+    animation-duration: 10s; */
+}
+.menuitem{
+    list-style-type: none;
+    display: block;
+    background-color: #1f1e2052;
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+.menulist{
+    float: left;
+}
+.menuitem:hover {
+  background-color: gray;
+}
+
+/* .menuitem:first-child {
+    background-color: #04AA6D;
+    color: white;
+    font-weight: bold;
+} */
+
+footer {
+  /* background-color: #333333; */
+  background-color: #1e201f;
+  padding: 5px;
+  color: #999999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-family: "Roboto";
+}
+#thanhvien {
+  margin-left: 390px;
+  font-size: x-large;
+}
+tr {
+  width: 100%;
+}
+td {
+  padding-left: 390px;
+  /* text-align: center; */
+}
+
+@media only screen  and (min-width: 1300px) and (max-width: 1900px)  {
+  .danhmuc {
+    width: 70%;
+  }
+  nav {
+    width: 16%;
+  }
+}
+
+@media only screen and (max-width: 1300px)   {
+  .danhmuc {
+    width: 60%;
+  }
+  nav{
+    width: 20%;
+  }
+}

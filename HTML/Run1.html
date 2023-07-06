@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Giới Thiệu VKU</title>
+
+   <link rel="icon" href="/Webdesign/Images/Icon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="R12.css">
+
+    <link rel="stylesheet" href="/Webdesign/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <script src="R1.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <nav class="navbar navbar-light bg-dark fixed-top ">
+                <div class="container-fluid ">
+                    <a class="navbar-brand " href="#">
+                        <h1>
+                            <span id="R">R </span>
+                            <span id="E">E </span>
+                            <span id="-">-</span>
+                            <span id="V">V</span>
+                            <span id="K">K</span>
+                            <span id="U">U</span>
+                        </h1>
+                    </a>
+                    <button class="navbar-toggler border-white" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar ">
+                        <span class="navbar-toggler-icon text-light "></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end slide" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mục Lục</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#"
+                                        onclick="show('gioithieu')">Giới Thiệu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="show('csvc')">Cơ Sở Vật Chất</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        onclick="show('bomon')">Chương Trình</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                        <a class="dropdown-item" href="#A1">Công Nghệ Thông Tin (Kỹ Sư)</a>
+                                        <a class="dropdown-item" href="#A2">Công Nghệ Thông Tin (Cử Nhân)</a>
+                                        <a class="dropdown-item" href="#A3">Công Nghệ Thông Tin (Đặc Thù)</a>
+                                        <a class="dropdown-item" href="#A4">Trí Tuệ Nhân Tạo</a>
+                                        <a class="dropdown-item" href="#A5">Chương Trình Toàn Cầu Ngành CNTT</a>
+                                        <a class="dropdown-item" href="#A6">Công Nghệ Kĩ Thuật Máy Tính (Kĩ Sư)</a>
+                                        <a class="dropdown-item" href="#A7">Công Nghệ Kĩ Thuật Máy Tính (Cử Nhân)</a>
+                                        <a class="dropdown-item" href="#A8">Chuyên Ngành Mạng Và AN Toàn Thông Tin</a>
+                                        <a class="dropdown-item" href="#A9">Quản Trị Kinh Doanh</a>
+                                        <a class="dropdown-item" href="#A10">Quản Trị Du Lịch và Lữ Hành Số</a>
+                                        <a class="dropdown-item" href="#A11">Quản Trị Tài Chính Số</a>
+                                        <a class="dropdown-item" href="#A12">Chuyên ngành Quản trị Logistics & Chuỗi
+                                            <br> cung ứng số</a>
+                                        <a class="dropdown-item" href="#A13">Quản trị Dự án Công nghệ Thông tin</a>
+                                        <a class="dropdown-item" href="#A14">Quản trị kinh doanh - Chuyên ngành <br>
+                                            Marketing kỹ thuật số</a>
+                                        <a class="dropdown-item" href="#A15">Chuyên ngành Thiết kế mỹ thuật số</a>
+
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="show('taichinh')">Tài Chính</a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="show('muaban')">Mua Bán</a>
+                                </li> -->
+                            </ul>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+        </nav>
+      
+
+
+    </header>
+
+    <div class="content">
+
+        <div id="gioithieu" class="danhmuc">
+            <h1 class="tieude">
+                GIỚI THIỆU WEBSITE
+            </h1>
+            <p>
+
+                Nhằm phục vụ mục đích giới thiệu trường học cho các em học sinh và
+                các quý phụ huynh cung các bạn muốn tìm hiểu về trường
+                Đại học Công Nghệ Thông Tin và Truyền Thông Việt Hàn (VKU)
+            </p>
+            <p>
+                Website Re-VKU ra đời nhằm phục vụ những nhu cầu kể trên, chúng tôi xây dựng
+                trang website trên một góc nhìn khách quan, không mang mục đích xấu.Xin chân thành cảm
+                ơn đã ghé thăm trang website của chúng tôi.
+            </p>
+            <p style="text-align: center;">
+                ------------------------------------------------------------------------------------
+
+            </p>
+            <p>
+                Hiện thực hóa quan điểm chỉ đạo của Nghị quyết số 36-NQ/TW ngày 01/7/2014 của Bộ Chính trị về đẩy
+                mạnh ứng dụng, phát triển công nghệ thông tin đáp ứng yêu cầu phát triển bền vững và hội nhập quốc
+                tế, ngày 24/2/2017, Thủ tướng Nguyễn Xuân Phúc và đoàn công tác Chính phủ đã có cuộc làm việc và chỉ
+                đạo Bộ Giáo dục và Đào tạo, Bộ Thông tin và Truyền thông, Thành phố Đà Nẵng và Đại học Đà Nẵng xúc
+                tiến thành lập trường đại học đào tạo chuyên sâu về lĩnh vực công nghệ thông tin và truyền thông,
+                góp phần đưa Đại học Đà Nẵng trở thành nơi giáo dục tiên tiến, hướng đến đẳng cấp thuộc tốp 50 đại
+                học nghiên cứu của Đông Nam Á vào năm 2035, trực tiếp đóng góp vào hệ sinh thái quốc gia khởi
+                nghiệp.
+            </p>
+            <p>
+                1. Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn, Đại học Đà Nẵng là trường đại học
+                thành viên của Đại học Đà Nẵng (ĐHĐN), được thành lập theo Quyết định số 15/QĐ-TTg ngày 03 tháng 01
+                năm 2020 của Thủ tướng Chính phủ, có tư cách pháp nhân, con dấu và tài khoản riêng; thực hiện tự chủ
+                theo quy định của pháp luật; chịu sự quản lý trực tiếp của ĐHĐN, quản lý Nhà nước về giáo dục của Bộ
+                Giáo dục và Đào tạo (GD&ĐT); chịu sự quản lý Nhà nước về các lĩnh vực có liên quan của các bộ, ngành
+                khác và quản lý theo lãnh thổ của Ủy ban Nhân dân thành phố Đà Nẵng và tỉnh Quảng Nam.
+                <br>
+                <img src="/Webdesign/Images/0111.jpg" alt="" class="img1">
+            </p>
+            <p>
+                2. Tên tiếng Việt: Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn, Đại học Đà Nẵng.
+            </p>
+            <p>
+                3.Tên tiếng Anh: The University of Danang, Vietnam-Korea University of Information and Communication
+                Technology.
+                Tên viết tắt: UD - VKU.
+                <br>
+                <img src="/Webdesign/Images/logo.png" alt="">
+            </p>
+            <p>
+                4. Trụ sở chính tại Khu Đô thị Đại học Đà Nẵng, Đường Nam Kỳ Khởi Nghĩa, Quận Ngũ Hành Sơn, Thành
+                phố Đà Nẵng.
+                <br>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15342.81483422626!2d108.25116625894566!3d15.976842055027493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiB2w6AgVHJ1eeG7gW4gdGjDtG5nIFZp4buHdCAtIEjDoG4!5e0!3m2!1svi!2s!4v1685773588193!5m2!1svi!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </p>
+            <p>
+                5. Website:
+                <a href="http://vku.udn.vn " target="_blank">http://vku.udn.vn</a><br>
+                VKU có chức năng đào tạo các trình độ của giáo dục đại học (gồm đại học, thạc sỹ và tiến sỹ) các
+                ngành thuộc lĩnh vực công nghệ thông tin, truyền thông và ứng dụng; hoạt động khoa học, công nghệ và
+                phục vụ cộng đồng.
+
+                Tên gọi của Trường đã thể hiện rõ lĩnh vực đào tạo và quan hệ hợp tác quốc tế hữu nghị giữa hai
+                chính phủ Việt Nam và Hàn Quốc trong chiến lược đầu tư và phát triển.
+            
+            </p>
+
+        </div>
+        <div id="dauvao" class="danhmuc">
+            <h1 class="tieude">Thi Đánh Giá Năng Lực (ĐGNL)</h1>
+            <p>
+
+            </p>
+        </div>
+        <div id="csvc" class="danhmuc">
+
+            <h1 class="tieude">Khu Giảng Đường </h1>
+
+            <p>
+                Khu Giảng đường được đầu tư xây dựng khang trang,
+                đồng bộ với trên 149 phòng học, hội trường gồm 300 chỗ ngồi.
+                Tất cả các phòng học đều được trang bị đầy đủ bảng viết di
+                động và cố định, máy tính, máy chiếu hỗ trợ công tác giảng
+                dạy, nhiều thiết bị đa phương tiện (SmartClass+) phục vụ giảng
+                dạy tiếng Anh, tiếng Nhật và hệ thống mạng máy tính cho phép
+                truy cập Internet tốc độ cao.
+               
+            </p>
+            <img src="/Webdesign/Images/giangduong.jpg" alt="" class="img1">
+            <h1 class="tieude">Khu Thực Hành Thí Nghiệm </h1>
+
+            <p>
+                - Khu thực hành thí nghiệm
+
+                Hiện có 60 phòng thực hành, thí nghiệm gồm 2.200 máy tính nối mạng, các thiết thực hành điều
+                khiển tự động và hệ thống nhúng đáp ứng nhu cầu nghiên cứu, học tập cho sinh viên.
+            </p>
+
+            <img src="http://vku.udn.vn/uploads/2020/07/24/1595545939_Media-22%20(1).JPG" class="img1">
+
+            <h1 class="tieude">Khu Thư Viện </h1>
+            <p>
+                - Khu thư viện
+
+                Hệ thống thư viện và Trung tâm học liệu hiện đại với 03 phòng đọc có sức chứa hơn 1500 người; và hơn
+                55.000 đầu sách; máy tính và wifi luôn sẳn sàng cho các yêu cầu truy cập Internet của sinh viên, cán
+                bộ, giảng viên. Hệ thống cơ sở dữ liệu điện tử được liên kết với các trường đại học trong và ngoài
+                nước.
+            </p>
+            <h1 class="tieude">Khu Kí Túc Xá </h1>
+            <p>
+                - Khu Ký túc xá
+                Khu ký túc xá sinh viên gồm 05 toà nhà 5 tầng, phục vụ nội trú cho khoảng 5000 sinh viên, với các
+                phòng ở đầy đủ tiện nghị, có công trình phụ khép kín trong mỗi phòng sinh hoạt riêng.
+                <img src="http://vku.udn.vn/uploads/2020/07/24/1595545939_Media-40.JPG" alt="" class="img1">
+            </p>
+        </div>
+        <div id="khoa" class="danhmuc">
+            <h1 class="tieude">Cơ Cấu Tổ Chức </h1>
+            <img src="https://cdn.vku-udn.edu.vn/uploads/2022/04/21/1650505902_sodotochuc.jpg" alt="" class="img2">
+            <h1 class="tieude">Khoa Khoa Học Máy Tính </h1>
+            <h1 class="tieude">Khoa Kĩ Thuật Máy Tính & Điện Tử </h1>
+            <h1 class="tieude">Khoa Quản Trị Kinh Doanh</h1>
+            <h1 class="tieude">Tổ Cơ Bản </h1>
+        </div>
+        <div id="giangvien" class="danhmuc">
+
+            <!--Bộ Môn-->
+        </div>
+
+        <div id="bomon" class="danhmuc">
+
+            <div class="containerlabel">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Nhập số tín chỉ</h5>
+                        <div class="form-group">
+                            <label for="numberInput">Số tín chỉ:</label>
+                            <input type="number" class="form-control" id="numberInput" onchange="checkNumber()" min="0"
+                                max="24" placeholder="Số tín chỉ bạn học trong 1 kì ?">
+                        </div>
+                        <div class="form-group">
+                            <label for="resultLabel">Kết quả:</label>
+                            <label id="resultLabel" class="form-control hidden-label"></label>
+                        </div>
+                        <div class="form-group">
+                            <label for="feeLabel">Học phí(Khối Kinh Tế):</label>
+                            <label id="feeLabel" class="form-control hidden-label"></label>
+                        </div>
+                        <div class="form-group">
+                            <label for="feeLabel2">Học phí(Khối Kĩ Thuật):</label>
+                            <label id="feeLabel2" class="form-control hidden-label"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <h1 class="tieude" id="A1">Khung Chương Trình Công Nghệ Thông Tin (Kỹ Sư)</h1>
+            <p>
+
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=152 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 9 học kỳ/4,5 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="http://vku.udn.vn/uploads/2021/05/12/1620804635_CNTT.jpg" alt="">
+
+
+            <h1 class="tieude" id="A2">Khung Chương Trình Công Nghệ Thông Tin (Cử Nhân)</h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=126 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 8 học kỳ/4 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+                <br>
+                <span>Lưu ý: </span> Sau khi học hết học kì 1 dựa vào điểm trung bình học kì sẽ phân thành các ngành
+                như:
+                <br>
+                - Truyền Thông Đa Phương Tiện <br>
+                - Kĩ Thuật Phần Mềm <br>
+                - IoT-Robotics <br>
+            <h2 class="h2">Chuyên Ngành Kĩ Thuật Phần Mềm</h2>
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645884228-1645883838_cncntt_2.JPG" alt="" class="img1">
+            <h2 class="h2">Chuyên Ngành Kĩ Thuật IoT-Robotics</h2>
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645884229-1645883848_cncntt_3.JPG" alt="" class="img1">
+
+
+            <h1 class="tieude" id="A4">Khung Chương Trình Trí Tuệ Nhân Tạo (Kỹ Sư)</h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=160 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 9 học kỳ/4,5 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645873047-1645872641_ai_ks3.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645873048-1645872653_ai_ks4.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645873048-1645872668_ai_ks5.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645873048-1645872678_ai_ks6.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645872556-1645872174_ai_ks2.JPG" alt="">
+            </p>
+
+
+            <h1 class="tieude" id="A3">Khung Chương Trình Công Nghệ Thông Tin Đặc Thù (Cử Nhân)</h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=126 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 8 học kỳ/4 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="https://cdn.vku-udn.edu.vn/uploads/2022/03/18/1647567086_dt2.JPG" alt="">
+            <img src="https://cdn.vku-udn.edu.vn/uploads/2022/03/18/1647567100_dt3.JPG" alt="">
+            <img src="https://cdn.vku-udn.edu.vn/uploads/2022/03/18/1647567119_dt4.JPG" alt="">
+            <img src="https://cdn.vku-udn.edu.vn/uploads/2022/03/18/1647567129_dt5.JPG" alt="">
+            <img src="https://cdn.vku-udn.edu.vn/uploads/2022/03/18/1647567144_dt6.JPG" alt="">
+
+
+            <h1 class="tieude" id="A5">Khung Chương Trình Công Nghệ Thông Tin Toàn Cầu (Kỹ Sư)</h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=152 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 8 học kỳ/4 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="https://vku.udn.vn//uploads/2022/05/09/1652065359-1652064898_1.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/05/09/1652065360-1652064912_2.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/05/09/1652065360-1652064927_3.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/05/09/1652065361-1652064938_4.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/05/09/1652065361-1652064952_5.JPG" alt="">
+
+
+            <h1 class="tieude" id="A6">Khung Chương Trình Công Nghệ Kỹ Thuật Máy Tính (Kỹ Sư)</h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=152 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 9 học kỳ/4,5 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="http://vku.udn.vn/uploads/2021/06/23/1624436831_Capture.PNG" alt="" class="img1">
+
+            <h1 class="tieude" id="A7">Khung Chương Trình Công Nghệ Kỹ Thuật Máy Tính (Cử Nhân)</h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=126 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 8 học kỳ/4 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645887517-1645887499-1645887492-1645887483-1645887463-1645887079_cnktmt_3.JPG"
+                alt="" class="img1">
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645887517-1645887499-1645887492-1645887483-1645887464-1645887093_cnktmt_4.JPG"
+                alt="" style="width: 60em;">
+
+
+            <h1 class="tieude" id="A8">Khung Chương Trình Chuyên Ngành Mạng và An Toàn Thông Tin (Kĩ Sư)</h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=160 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 9 học kỳ/4,5 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645880979-1645880609_mattt_7.JPG" alt="">
+
+
+            <!--Khối Kinh Tế-->
+
+            <h1 class="tieude" id="A9">Khung Chương Trình Ngành Quản Trị Kinh Doanh</h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=126 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 8 học kỳ/4 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="http://vku.udn.vn/uploads/2021/05/12/1620807426_QTKD.jpg" alt="">
+
+
+            <h1 class="tieude" id="A10">Khung Chương Trình Ngành Quản Trị
+                dịch vụ du lịch và lữ hành số
+            </h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=126 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 8 học kỳ/4 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="http://vku.udn.vn/uploads/2021/05/12/1620808178_QTDL.jpg" alt="">
+
+
+            <h1 class="tieude" id="A11">Khung Chương Trình Quản Trị Tài Chính Số </h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=126 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 8 học kỳ/4 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645889536-1645889151_qttc_2.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645889536-1645889158_qttc_3.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645889536-1645889167_qttc_4.JPG" alt="">
+
+            <h1 class="tieude" id="A12">Khung Chương Trình Ngành Quản trị Logicstics & Chuỗi cung ứng số</h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=126 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 8 học kỳ/4 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="http://vku.udn.vn/uploads/2021/05/12/1620808805_QTLogistics.jpg" alt="">
+
+
+
+            <h1 class="tieude" id="A13">Khung Chương Trình Quản Trị Dự Án CNTT</h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=126 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 8 học kỳ/4 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645892130-1645891726_qtda_4.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645892130-1645891740_qtda_5.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645892131-1645891749_qtda_6.JPG" alt="">
+            <img src="https://vku.udn.vn//uploads/2022/02/26/1645892131-1645891758_qtda_7.JPG" alt="">
+
+
+            <h1 class="tieude" id="A14">Khung Chương Trình Chuyên Ngành Marketing Kỹ Thuật Số</h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=126 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 8 học kỳ/4 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="https://cdn.vku-udn.edu.vn/uploads/2022/05/19/1652932976_1.JPG" alt="">
+            <img src="https://cdn.vku-udn.edu.vn/uploads/2022/05/19/1652932987_2.JPG" alt="">
+            <img src="https://cdn.vku-udn.edu.vn/uploads/2022/05/19/1652933000_3.JPG" alt="">
+            <img src="https://cdn.vku-udn.edu.vn/uploads/2022/05/19/1652933025_4.JPG" alt="">
+
+            <h1 class="tieude" id="A15">Khung Chương Trình Chuyên Ngành Thiết Kế Mỹ Thuật Số</h1>
+            <p>
+                <span>- Hệ đào tạo:</span> Chính quy
+                <br>
+                <span>- Tổng khối lượng toàn khóa:</span> >=126 tín chỉ(TC) - chưa bao gồm các học phần Giáo dục thể
+                chất (4TC), Tiếng Anh dự bị (5TC) và Giáo dục quốc phòng - an ninh (quy đổi 8TC)
+                <br>
+                <span>- Thời gian đào tạo dự kiến:</span> 8 học kỳ/4 năm
+                <br>
+                <span>* Từ viết tắt:</span> LT: Lý thuyết; TH: Thực hành; BT: Bài tập;
+            </p>
+            <img src="http://vku.udn.vn/uploads/2021/05/12/1620805180_CNTT_ThietKeMyThuat.jpg" alt="">
+
+
+        </div>
+        <div id="taichinh" class="danhmuc">
+            <h1 class="tieude">Tài Chính Dành Cho Tân Sinh Viên </h1>
+            <div class="container-calculator">
+                <div class="calculator">
+                    <div class="result">
+                        <input type="text" id="result" class="form-control" >
+                    </div>
+                    <div class="buttons">
+                        <button onclick="appendNumber('7')">7</button>
+                        <button onclick="appendNumber('8')">8</button>
+                        <button onclick="appendNumber('9')">9</button>
+                        <button onclick="appendOperator('+')">+</button>
+                        <br>
+                        <button onclick="appendNumber('4')">4</button>
+                        <button onclick="appendNumber('5')">5</button>
+                        <button onclick="appendNumber('6')">6</button>
+                        <button onclick="appendOperator('-')">-</button>
+                        <br>
+                        <button onclick="appendNumber('1')">1</button>
+                        <button onclick="appendNumber('2')">2</button>
+                        <button onclick="appendNumber('3')">3</button>
+                        <button onclick="appendOperator('*')">*</button>
+                        <br>
+                        <button onclick="appendNumber('0')">0</button>
+                        <button onclick="clearResult()">C</button>
+                        <button onclick="calculateResult()">=</button>
+                        <button onclick="appendOperator('/')">/</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-md-10 ml-1">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title text-success"><b><u>Học phí: </u></b></h3>
+                                <p class="card-text">
+                                <ul>
+                                    <li><b>Học phí(HP)</b>của VKU khoảng từ 5,3tr – 6,4tr/học kỳ (HK).</li>
+                                    <li><b>HP</b> = Số tín chỉ x Đơn giá tín chỉ (TC)</li>
+                                    <li>Mỗi năm có 02 học kì, trung bình mỗi học kì có 18 tín chỉ.</li>
+                                    <li>Đơn giá đối với khối xã hội,<b> Kinh Tế 310.000 đồng/1TC</b>
+                                        , <b>khối tự nhiên; kỹ thuật, công nghệ 337.000 đồng/1TC</b></li>
+                                    <li><b>Vậy: 18 X 310.000 = 5.580.000 (VNĐ) hoặc 18 x 337.000 = 6.066.000
+                                            (VNĐ)</b> </li>
+                                    <li><b>===></b> Đây là mức HP trung bình, mỗi HK có thể ít hoặc nhiều hơn tùy thuộc
+                                        vào số TC mà bạn đăng ký trong HK. HP trong các năm thường không tăng, nếu có
+                                        tăng không quá 10% theo quy định
+                                        của chính phủ.</li>
+
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10 ml-1" style="padding-top: 10px;">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h3 class="card-title text-success"><b><u>Sinh Hoạt</u></b></h3>
+                                <p class="card-text ">
+                                <ul>
+                                    <li>
+                                        <b>Nếu bạn ở kí túc xá</b>
+                                        <ul>
+                                            <!-- <li>
+                                                        <b>Thuê trọ: </b> (Dao động từ <b>1.500.000đ-3.000.000đ</b>) hàng tháng: <span class="text-info">Không</span>
+                                                    </li> -->
+                                            <li>
+                                                <b><u>Phòng:</u></b>
+                                                <ul style="list-style-type: disc;">
+                                                    <li><b>Phòng dịch vụ (3 người/phòng):</b> 700.000đ/1 người/1
+                                                        tháng</li>
+                                                    <li><b>Phòng 8 người: </b>100.000đ/01 tháng/01 sinh viên</li>
+                                                    <li><b>Phòng 4 người:</b> 200.000đ/01 tháng/01 sinh viên</li>
+                                                    <li><b>Điện:</b> thanh toán theo thực tế sử dụng, thu theo
+                                                        tháng,
+                                                        đơn giá theo quy định nhà nước, thu từ ngày 05 đến ngày 15
+                                                        của tháng liền kề
+                                                        (Sau ngày 15 là cắt điện)
+                                                        <a href="https://www.evn.com.vn/c3/evn-va-khach-hang/Bieu-gia-ban-le-dien-9-79.aspx"
+                                                            target="_blank">Xem giá điện tại đây</a>
+                                                    </li>
+                                                    <li><b>Nước: </b> 5.488đ/m<sup>3</sup> (mét khối)</li>
+                                                    <li><b>Các khoản khác:</b>
+                                                        <ul>
+                                                            <li>
+                                                                <b>Tiền thế chấp tài sản:</b> 100.000đ/ sinh viên,
+                                                                sẽ hoàn trả khi sinh viên không ở KTX và bàn giao
+                                                                nguyên trạng tài sản phòng ở
+                                                            </li>
+                                                            <li>
+                                                                <b>Lệ phí đăng ký tạm trú tại công an Phường Hòa
+                                                                    Quý: </b> 15.000đ/1 SV
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                            </li>
+                                            <li><b>Ăn uống:</b> Hiện nay gần trường có rất nhiều quán ăn phục vụ đủ
+                                                ngày 3 bữa (Sáng/Trưa/Tối). Giá bình quân <u>20.000đ</u></li>
+                                            <li><b>Chi phí đi lại:</b> Vì KTX gần trường (Khoảng 500m) nên việc đi
+                                                lại khá thuận lợi</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <b> Nếu bạn ở trọ</b>
+                                        <ul>
+                                            <li>
+                                                <b>Thuê trọ: </b> (Dao động từ <b>1.500.000đ-3.000.000đ</b>) hàng
+                                                tháng.
+                                            </li>
+                                            <li>
+
+                                            <li><b>Nước: </b> 6.869đ/m<sup>3</sup> (mét khối) - <span
+                                                    class="text-danger">10 mét khối đầu tiên</span></li>
+                                            <li><b>Điện: </b> Tùy thuộc vào mức sử dụng của bạn, nơi bạn thuê. Thông
+                                                thường 1 số điện tại các phòng trọ có giá dao động từ
+                                                3.000-4.500đ/số(chữ) điện
+                                                <a href="https://www.evn.com.vn/c3/evn-va-khach-hang/Bieu-gia-ban-le-dien-9-79.aspx"
+                                                    target="_blank">Xem giá bán lẻ điện tại đây</a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                    <li><b>Ăn uống:</b> Hiện nay gần trường có rất nhiều quán ăn phục vụ đủ ngày 3
+                                        bữa (Sáng/Trưa/Tối). Giá bình quân <u>20.000đ</u>. Bạn cũng có thể đi chợ để
+                                        tự nấu, giá sẽ tùy thuộc vào bạn.
+                                    </li>
+                                    <li><b>Chi phí đi lại:</b> Tùy thuộc bạn thuê trọ ở đâu, xung quanh trường có
+                                        rất nhiều chỗ cho thuê trọ</li>
+                                    <a href="#">Xem Phòng trọ cho thuê tại đây</a>
+                                </ul>
+                                </li>
+                                </ul>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10 ml-1" style="padding-top: 10px;">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title text-success"><b><u>Việc Làm: </u></b></h3>
+                                <p class="card-text">
+                                    <a
+                                        href="https://www.facebook.com/HoiTimViecLamThemChoSinhVienTaiDaNang/?locale=vi_VN">
+                                        Tham Khảo Việc Làm Thêm Trên Facebook
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- <div id="muaban" class="danhmuc">
+
+        </div> -->
+    </div>
+
+    </main>
+
+    <footer class="footer">
+        <p style="text-align: center;">
+            Copyright © 2022 - Trường Đại học Công nghệ Thông tin & Truyền Thông Việt - Hàn, Đại học Đà Nẵng
+            <br>
+            Địa chỉ: 470 Đường Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng
+            <br>
+        </p>
+    </footer>
+</body>
+
+</html>

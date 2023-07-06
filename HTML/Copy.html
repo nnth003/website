@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.0b067bd5.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAVIE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet"> -->
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,500&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,500&display=swap" rel="stylesheet"> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&amp;family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,500&amp;display=swap"
+        rel="stylesheet">
+    <script type="module" crossorigin="" src="/assets/index.b143d303.js"></script>
+    <link rel="stylesheet" href="/assets/index.4bd328b5.css">
+    <style type="text/css">
+        .lf-progress {
+            -webkit-appearance: none;
+            -moz-apperance: none;
+            width: 100%;
+            /* margin: 0 10px; */
+            height: 4px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .lf-progress:focus {
+            outline: none;
+            border: none;
+        }
+
+        .lf-progress::-moz-range-track {
+            cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        .lf-progress::-webkit-slider-thumb {
+            -webkit-appearance: none !important;
+            height: 13px;
+            width: 13px;
+            border: 0;
+            border-radius: 50%;
+            background: #0fccce;
+            cursor: pointer;
+        }
+
+        .lf-progress::-moz-range-thumb {
+            -moz-appearance: none !important;
+            height: 13px;
+            width: 13px;
+            border: 0;
+            border-radius: 50%;
+            background: #0fccce;
+            cursor: pointer;
+        }
+
+        .lf-progress::-ms-track {
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+
+        .lf-progress::-ms-fill-lower {
+            background: #ccc;
+            border-radius: 3px;
+        }
+
+        .lf-progress::-ms-fill-upper {
+            background: #ccc;
+            border-radius: 3px;
+        }
+
+        .lf-progress::-ms-thumb {
+            border: 0;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background: #0fccce;
+            cursor: pointer;
+        }
+
+        .lf-progress:focus::-ms-fill-lower {
+            background: #ccc;
+        }
+
+        .lf-progress:focus::-ms-fill-upper {
+            background: #ccc;
+        }
+
+        .lf-player-container :focus {
+            outline: 0;
+        }
+
+        .lf-popover {
+            position: relative;
+        }
+
+        .lf-popover-content {
+            display: inline-block;
+            position: absolute;
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, -10px);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+            transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+        }
+
+        .lf-popover-content.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(0, 0px);
+        }
+
+        .lf-player-btn-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .lf-player-btn {
+            cursor: pointer;
+            fill: #999;
+            width: 14px;
+        }
+
+        .lf-player-btn.active {
+            fill: #555;
+        }
+
+        .lf-popover {
+            position: relative;
+        }
+
+        .lf-popover-content {
+            display: inline-block;
+            position: absolute;
+            background-color: #ffffff;
+            opacity: 1;
+
+            transform: translate(0, -10px);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+            transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+            padding: 10px;
+        }
+
+        .lf-popover-content.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(0, 0px);
+        }
+
+        .lf-arrow {
+            position: absolute;
+            z-index: -1;
+            content: '';
+            bottom: -9px;
+            border-style: solid;
+            border-width: 10px 10px 0px 10px;
+        }
+
+        .lf-left-align,
+        .lf-left-align .lfarrow {
+            left: 0;
+            right: unset;
+        }
+
+        .lf-right-align,
+        .lf-right-align .lf-arrow {
+            right: 0;
+            left: unset;
+        }
+
+        .lf-text-input {
+            border: 1px #ccc solid;
+            border-radius: 5px;
+            padding: 3px;
+            width: 60px;
+            margin: 0;
+        }
+
+        .lf-color-picker {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 90px;
+        }
+
+        .lf-color-selectors {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .lf-color-component {
+            display: flex;
+            flex-direction: row;
+            font-size: 12px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lf-color-component strong {
+            width: 40px;
+        }
+
+        .lf-color-component input[type='range'] {
+            margin: 0 0 0 10px;
+        }
+
+        .lf-color-component input[type='number'] {
+            width: 50px;
+            margin: 0 0 0 10px;
+        }
+
+        .lf-color-preview {
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 5px;
+        }
+
+        .lf-preview {
+            height: 60px;
+            width: 60px;
+        }
+
+        .lf-popover-snapshot {
+            width: 150px;
+        }
+
+        .lf-popover-snapshot h5 {
+            margin: 5px 0 10px 0;
+            font-size: 0.75rem;
+        }
+
+        .lf-popover-snapshot a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .lf-popover-snapshot a:before {
+            content: '⥼';
+            margin-right: 5px;
+        }
+
+        .lf-popover-snapshot .lf-note {
+            display: block;
+            margin-top: 10px;
+            color: #999;
+        }
+
+        .lf-player-controls>div {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        .lf-player-controls>div:first-child {
+            margin-left: 0px;
+        }
+
+        .lf-player-controls>div:last-child {
+            margin-right: 0px;
+        }
+    </style>
+    <style id="_goober">
+        @keyframes go2264125279 {
+            from {
+                transform: scale(0) rotate(45deg);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1) rotate(45deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes go3020080000 {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes go463499852 {
+            from {
+                transform: scale(0) rotate(90deg);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1) rotate(90deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes go1268368563 {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes go1310225428 {
+            from {
+                transform: scale(0) rotate(45deg);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1) rotate(45deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes go651618207 {
+            0% {
+                height: 0;
+                width: 0;
+                opacity: 0;
+            }
+
+            40% {
+                height: 0;
+                width: 6px;
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+                height: 10px;
+            }
+        }
+
+        @keyframes go901347462 {
+            from {
+                transform: scale(0.6);
+                opacity: 0.4;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .go4109123758 {
+            z-index: 9999;
+        }
+
+        .go4109123758>* {
+            pointer-events: auto;
+        }
+    </style>
+</head>
+
+<body style="">
+    <div id="root">
+        <div>
+            <header>
+                <div class="header is-flex is-justify-content-space-between is-align-items-stretch px-6">
+                    <div class="is-size-1 has-text-weight-bold is-uppercase"><a class="header-logo is-unselectable"
+                            href="/">
+                            <figure class="image is-2by1"><img
+                                    src="data:image/png;base64,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"
+                                    alt=""></figure>
+                        </a></div>
+                    <div class="header-menu full-height is-flex is-relative">
+                        <div class="is-flex is-align-items-center is-relative px-3"><a
+                                class="header-menu-item is-size-6 has-text-weight-bold is-flex is-justify-content-center is-align-items-center font-heading "
+                                href="/"><span>Trang chủ</span></a></div>
+                        <div class="is-flex is-align-items-center is-relative px-3"><a
+                                class="header-menu-item is-size-6 has-text-weight-bold is-flex is-justify-content-center is-align-items-center font-heading header-menu-active"
+                                href="/category"><span>Danh mục</span><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none"></rect>
+                                    <polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                                </svg>
+                                <div class="header-menu-underline" data-projection-id="3" style="opacity: 1;"></div>
+                            </a></div>
+                        <div class="menu-list is-block has-shadow ">
+                            <div class="is-flex is-flex-wrap-wrap py-4">
+                                <div class="menu-list-item"><a
+                                        class="is-capitalized has-text-grey has-text-weight-semibold is-flex is-align-items-center"
+                                        href="/category?type=canvas">
+                                        <div><img src="/assets/silk-icon.png" width="16" height="16"></div><span
+                                            class="ml-1">Vải</span>
+                                    </a></div>
+                                <div class="menu-list-item"><a
+                                        class="is-capitalized has-text-grey has-text-weight-semibold is-flex is-align-items-center"
+                                        href="/category?type=bamboo">
+                                        <div><img src="/assets/bamboo-icon.png" width="16" height="16"></div><span
+                                            class="ml-1">Tre</span>
+                                    </a></div>
+                                <div class="menu-list-item"><a
+                                        class="is-capitalized has-text-grey has-text-weight-semibold is-flex is-align-items-center"
+                                        href="/category?type=disposable-nilon">
+                                        <div><img src="/assets/disposable-nilon-icon.png" width="16" height="16"></div>
+                                        <span class="ml-1">Túi phân hủy</span>
+                                    </a></div>
+                                <div class="menu-list-item"><a
+                                        class="is-capitalized has-text-grey has-text-weight-semibold is-flex is-align-items-center"
+                                        href="/category?type=toothbrush">
+                                        <div><img src="/assets/brush-teeth-icon.png" width="16" height="16"></div><span
+                                            class="ml-1">Bàn chải</span>
+                                    </a></div>
+                                <div class="menu-list-item"><a
+                                        class="is-capitalized has-text-grey has-text-weight-semibold is-flex is-align-items-center"
+                                        href="/category?type=straw">
+                                        <div><img src="/assets/straw-icon.png" width="16" height="16"></div><span
+                                            class="ml-1">Ống hút</span>
+                                    </a></div>
+                                <div class="menu-list-item"><a
+                                        class="is-capitalized has-text-grey has-text-weight-semibold is-flex is-align-items-center"
+                                        href="/category?type=bottle">
+                                        <div><img src="/assets/bottle-icon.png" width="16" height="16"></div><span
+                                            class="ml-1">Chai</span>
+                                    </a></div>
+                                <div class="menu-list-item"><a
+                                        class="is-capitalized has-text-grey has-text-weight-semibold is-flex is-align-items-center"
+                                        href="/category?type=cup">
+                                        <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" viewBox="0 0 256 256">
+                                                <rect width="256" height="256" fill="none"></rect>
+                                                <line x1="88" y1="24" x2="88" y2="56" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                                                </line>
+                                                <line x1="120" y1="24" x2="120" y2="56" fill="none"
+                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="16"></line>
+                                                <line x1="152" y1="24" x2="152" y2="56" fill="none"
+                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="16"></line>
+                                                <line x1="32" y1="216" x2="208" y2="216" fill="none"
+                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="16"></line>
+                                                <path d="M83.3,216A88,88,0,0,1,32,136V88H208v48a88,88,0,0,1-51.3,80"
+                                                    fill="none" stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="16"></path>
+                                                <path d="M208,88h0a32,32,0,0,1,32,32v8a32,32,0,0,1-32,32h-3.4"
+                                                    fill="none" stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="16"></path>
+                                            </svg></div><span class="ml-1">Ly</span>
+                                    </a></div>
+                                <div class="menu-list-item"><a
+                                        class="is-capitalized has-text-grey has-text-weight-semibold is-flex is-align-items-center"
+                                        href="/category?type=others">
+                                        <div><img src="/assets/others-icon.png" width="16" height="16"></div><span
+                                            class="ml-1">Khác</span>
+                                    </a></div>
+                            </div>
+                        </div>
+                        <div class="is-flex is-align-items-center is-relative px-3"><a
+                                class="header-menu-item is-size-6 has-text-weight-bold is-flex is-justify-content-center is-align-items-center font-heading "
+                                href="/donate"><span>Quyên góp</span></a></div>
+                        <div class="is-flex is-align-items-center is-relative px-3"><a
+                                class="header-menu-item is-size-6 has-text-weight-bold is-flex is-justify-content-center is-align-items-center font-heading "
+                                href="/about-me"><span>Về chúng tôi</span></a></div>
+                    </div>
+                    <div class="header-tool is-flex is-align-items-center is-justify-content-flex-end">
+                        <div><span class="is-relative is-size-4 is-clickable"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none"></rect>
+                                    <rect x="32" y="72" width="192" height="144" rx="8" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="16"></rect>
+                                    <path d="M88,104V72a40,40,0,0,1,80,0v32" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                                </svg>
+                                <div class="cart-amount undefined"><span>0</span></div>
+                            </span>
+                            <div class="nav-cart-wrapper">
+                                <div class="nav-cart has-shadow" data-projection-id="4" style="opacity: 0; width: 0px;">
+                                    <div class="px-5 py-6 is-flex is-flex-direction-column" style="min-height: 100%;">
+                                        <div
+                                            class="nav-cart-header is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
+                                            <h3 class="is-size-4 mb-2" style="letter-spacing: 0.5px;">Giỏ hàng</h3>
+                                            <p class="is-italic is-size-7 has-text-grey">( 0 sản phẩm )</p>
+                                        </div>
+                                        <hr>
+                                        <div class="nav-cart-list is-flex-grow-1">
+                                            <p class="has-text-centered is-size-7 is-italic"> Không có gì ở đây</p>
+                                        </div>
+                                        <hr>
+                                        <div class="nav-cart-total"><span>Tổng tiền hàng: </span><span>0₫</span></div>
+                                        <hr>
+                                        <div class="nav-cart-checkout has-text-centered"><a href="/checkout"><button
+                                                    class="button button3 is-uppercase has-text-weight-semibold">Thanh
+                                                    toán</button></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><a class="is-size-4" href="/login"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                height="1em" fill="currentColor" viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <polyline points="94 170 136 128 94 86" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                                <line x1="24" y1="128" x2="136" y2="128" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                                <path d="M136,40h56a8,8,0,0,1,8,8V208a8,8,0,0,1-8,8H136" fill="none"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="16"></path>
+                            </svg></a>
+                    </div>
+                </div>
+            </header>
+            <div>
+                <div style="position: fixed; z-index: 9999; inset: 16px; pointer-events: none;"></div>
+            </div>
+            <main class="main">
+                <div class="container py-6 px-4">
+                    <div class="columns">
+                        <div class="column is-3">
+                            <div class="filter" style="">
+                                <h3 class="is-size-4 has-text-weight-semibold block">Phân loại</h3>
+                                <div class="mb-3" style="border-bottom: 1px solid rgb(238, 238, 238);">
+                                    <p class="has-text-weight-semibold mb-2 is-flex is-justify-content-space-between is-align-items-center is-clickable"
+                                        style="line-height: 2rem;"><span class="">Loại</span><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            fill="currentColor" viewBox="0 0 256 256">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                                        </svg></p>
+                                    <div style="overflow: hidden; height: auto;">
+                                        <ul class="is-flex is-flex-wrap-wrap">
+                                            <li class="filter-item is-flex is-align-items-center my-2 has-text-grey">
+                                                <input type="checkbox" name="cb-0" id="cb-0" class="mr-3 is-clickable"
+                                                    style="border-color: rgb(122, 122, 122);"><label for="cb-0"
+                                                    class="has-cursor-pointer">Vải</label>
+                                            </li>
+                                            <li class="filter-item is-flex is-align-items-center my-2 has-text-grey">
+                                                <input type="checkbox" name="cb-1" id="cb-1" class="mr-3 is-clickable"
+                                                    style="border-color: rgb(122, 122, 122);"><label for="cb-1"
+                                                    class="has-cursor-pointer">Tre</label>
+                                            </li>
+                                            <li class="filter-item is-flex is-align-items-center my-2 has-text-grey">
+                                                <input type="checkbox" name="cb-2" id="cb-2" class="mr-3 is-clickable"
+                                                    style="border-color: rgb(122, 122, 122);"><label for="cb-2"
+                                                    class="has-cursor-pointer">Túi phân hủy</label>
+                                            </li>
+                                            <li class="filter-item is-flex is-align-items-center my-2 has-text-grey">
+                                                <input type="checkbox" name="cb-3" id="cb-3" class="mr-3 is-clickable"
+                                                    style="border-color: rgb(122, 122, 122);"><label for="cb-3"
+                                                    class="has-cursor-pointer">Bàn chải</label>
+                                            </li>
+                                            <li class="filter-item is-flex is-align-items-center my-2 has-text-grey">
+                                                <input type="checkbox" name="cb-4" id="cb-4" class="mr-3 is-clickable"
+                                                    style="border-color: rgb(122, 122, 122);"><label for="cb-4"
+                                                    class="has-cursor-pointer">Ống hút</label>
+                                            </li>
+                                            <li class="filter-item is-flex is-align-items-center my-2 has-text-grey">
+                                                <input type="checkbox" name="cb-5" id="cb-5" class="mr-3 is-clickable"
+                                                    style="border-color: rgb(122, 122, 122);"><label for="cb-5"
+                                                    class="has-cursor-pointer">Chai</label>
+                                            </li>
+                                            <li class="filter-item is-flex is-align-items-center my-2 has-text-grey">
+                                                <input type="checkbox" name="cb-6" id="cb-6" class="mr-3 is-clickable"
+                                                    style="border-color: rgb(122, 122, 122);"><label for="cb-6"
+                                                    class="has-cursor-pointer">Ly</label>
+                                            </li>
+                                            <li class="filter-item is-flex is-align-items-center my-2 has-text-grey">
+                                                <input type="checkbox" name="cb-7" id="cb-7" class="mr-3 is-clickable"
+                                                    style="border-color: rgb(122, 122, 122);"><label for="cb-7"
+                                                    class="has-cursor-pointer">Khác</label>
+                                            </li>
+                                            <li class="filter-item is-flex is-align-items-center my-2 has-text-grey">
+                                                <input type="checkbox" name="cb-8" id="cb-8" class="mr-3 is-clickable"
+                                                    style="border-color: rgb(122, 122, 122);"><label for="cb-8"
+                                                    class="has-cursor-pointer">Mới</label>
+                                            </li>
+                                            <li class="filter-item is-flex is-align-items-center my-2 has-text-grey">
+                                                <input type="checkbox" name="cb-9" id="cb-9" class="mr-3 is-clickable"
+                                                    style="border-color: rgb(122, 122, 122);"><label for="cb-9"
+                                                    class="has-cursor-pointer">Nổi bật</label>
+                                            </li>
+                                            <li class="filter-item is-flex is-align-items-center my-2 has-text-grey">
+                                                <input type="checkbox" name="cb-10" id="cb-10" class="mr-3 is-clickable"
+                                                    style="border-color: rgb(122, 122, 122);"><label for="cb-10"
+                                                    class="has-cursor-pointer">Phổ biến</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mb-3" style="border-bottom: 1px solid rgb(238, 238, 238);">
+                                    <p class="has-text-weight-semibold mb-2 is-flex is-justify-content-space-between is-align-items-center"
+                                        style="line-height: 2rem;"><span class="">Giá</span><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            fill="currentColor" viewBox="0 0 256 256">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                                            </polyline>
+                                        </svg></p>
+                                </div>
+                                <div class="mb-3" style="border-bottom: 1px solid rgb(238, 238, 238);">
+                                    <p class="has-text-weight-semibold mb-2 is-flex is-justify-content-space-between is-align-items-center"
+                                        style="line-height: 2rem;"><span class="">Nhãn hàng</span><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            fill="currentColor" viewBox="0 0 256 256">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                                            </polyline>
+                                        </svg></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-9">
+                            <div class="category-product">
+                                <h3 class="is-size-4 has-text-weight-semibold block">Danh sách sản phẩm</h3>
+                                <div class="tile is-ancestor is-flex-wrap-wrap"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="footer-wrap">
+                <div class="footer ">
+                    <div class="mb-6 px-6">
+                        <p class="has-text-weight-bold mb-3" style="font-size: 1.1rem;">Thành viên</p>
+                        <div class="tile is-ancestor">
+                            <div class="tile is-parent is-3">
+                                <div class="tile is-child" style="letter-spacing: 0.2px;">
+                                    <p class="mb-1">Lê Kim Hoàng Trung</p>
+                                    <p class="mb-1">MSV: 21IT052</p><a href="https:/fb.com/trung181"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" viewBox="0 0 256 256" class="mr-3">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                                            </circle>
+                                            <path d="M168,88H152a23.9,23.9,0,0,0-24,24V224" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></path>
+                                            <line x1="96" y1="144" x2="160" y2="144" fill="none" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                                        </svg></a><a href="https://github.com/hoangtrung1801"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" viewBox="0 0 256 256" class="mr-3">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <path d="M84,240a23.9,23.9,0,0,0,24-24V168" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></path>
+                                            <path d="M172,240a23.9,23.9,0,0,1-24-24V168" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></path>
+                                            <path d="M152,168h16a23.9,23.9,0,0,1,24,24v8a23.9,23.9,0,0,0,24,24"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="16"></path>
+                                            <path d="M104,168H88a23.9,23.9,0,0,0-24,24v8a23.9,23.9,0,0,1-24,24"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="16"></path>
+                                            <path
+                                                d="M111.8,64A52,52,0,0,0,68,40a52,52,0,0,0-3.5,44.7A49.3,49.3,0,0,0,56,112v8a48,48,0,0,0,48,48h48a48,48,0,0,0,48-48v-8a49.3,49.3,0,0,0-8.5-27.3A52,52,0,0,0,188,40a52,52,0,0,0-43.8,24Z"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="16"></path>
+                                        </svg></a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                            height="30" fill="currentColor" viewBox="0 0 256 256" class="mr-3">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <circle cx="128" cy="128" r="40" fill="none" stroke="currentColor"
+                                                stroke-miterlimit="10" stroke-width="16"></circle>
+                                            <rect x="36" y="36" width="184" height="184" rx="48" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></rect>
+                                            <circle cx="180" cy="76" r="12"></circle>
+                                        </svg></a>
+                                </div>
+                            </div>
+                            <div class="tile is-parent is-3">
+                                <div class="tile is-child" style="letter-spacing: 0.2px;">
+                                    <p class="mb-1">Hà Cảnh Hồng Phúc</p>
+                                    <p class="mb-1">MSV: 21IT038</p><a href="https:/fb.com/trung181"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" viewBox="0 0 256 256" class="mr-3">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                                            </circle>
+                                            <path d="M168,88H152a23.9,23.9,0,0,0-24,24V224" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></path>
+                                            <line x1="96" y1="144" x2="160" y2="144" fill="none" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                                        </svg></a><a href="https://github.com/hoangtrung1801"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" viewBox="0 0 256 256" class="mr-3">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <path d="M84,240a23.9,23.9,0,0,0,24-24V168" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></path>
+                                            <path d="M172,240a23.9,23.9,0,0,1-24-24V168" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></path>
+                                            <path d="M152,168h16a23.9,23.9,0,0,1,24,24v8a23.9,23.9,0,0,0,24,24"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="16"></path>
+                                            <path d="M104,168H88a23.9,23.9,0,0,0-24,24v8a23.9,23.9,0,0,1-24,24"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="16"></path>
+                                            <path
+                                                d="M111.8,64A52,52,0,0,0,68,40a52,52,0,0,0-3.5,44.7A49.3,49.3,0,0,0,56,112v8a48,48,0,0,0,48,48h48a48,48,0,0,0,48-48v-8a49.3,49.3,0,0,0-8.5-27.3A52,52,0,0,0,188,40a52,52,0,0,0-43.8,24Z"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="16"></path>
+                                        </svg></a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                            height="30" fill="currentColor" viewBox="0 0 256 256" class="mr-3">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <circle cx="128" cy="128" r="40" fill="none" stroke="currentColor"
+                                                stroke-miterlimit="10" stroke-width="16"></circle>
+                                            <rect x="36" y="36" width="184" height="184" rx="48" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></rect>
+                                            <circle cx="180" cy="76" r="12"></circle>
+                                        </svg></a>
+                                </div>
+                            </div>
+                            <div class="tile is-parent is-3">
+                                <div class="tile is-child" style="letter-spacing: 0.2px;">
+                                    <p class="mb-1">Võ Văn Tuấn</p>
+                                    <p class="mb-1">MSV: 21IT055</p><a href="https:/fb.com/trung181"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" viewBox="0 0 256 256" class="mr-3">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                                            </circle>
+                                            <path d="M168,88H152a23.9,23.9,0,0,0-24,24V224" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></path>
+                                            <line x1="96" y1="144" x2="160" y2="144" fill="none" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                                        </svg></a><a href="https://github.com/hoangtrung1801"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" viewBox="0 0 256 256" class="mr-3">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <path d="M84,240a23.9,23.9,0,0,0,24-24V168" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></path>
+                                            <path d="M172,240a23.9,23.9,0,0,1-24-24V168" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></path>
+                                            <path d="M152,168h16a23.9,23.9,0,0,1,24,24v8a23.9,23.9,0,0,0,24,24"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="16"></path>
+                                            <path d="M104,168H88a23.9,23.9,0,0,0-24,24v8a23.9,23.9,0,0,1-24,24"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="16"></path>
+                                            <path
+                                                d="M111.8,64A52,52,0,0,0,68,40a52,52,0,0,0-3.5,44.7A49.3,49.3,0,0,0,56,112v8a48,48,0,0,0,48,48h48a48,48,0,0,0,48-48v-8a49.3,49.3,0,0,0-8.5-27.3A52,52,0,0,0,188,40a52,52,0,0,0-43.8,24Z"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="16"></path>
+                                        </svg></a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                            height="30" fill="currentColor" viewBox="0 0 256 256" class="mr-3">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <circle cx="128" cy="128" r="40" fill="none" stroke="currentColor"
+                                                stroke-miterlimit="10" stroke-width="16"></circle>
+                                            <rect x="36" y="36" width="184" height="184" rx="48" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></rect>
+                                            <circle cx="180" cy="76" r="12"></circle>
+                                        </svg></a>
+                                </div>
+                            </div>
+                            <div class="tile is-parent is-3">
+                                <div class="tile is-child" style="letter-spacing: 0.2px;">
+                                    <p class="mb-1">Trương Đình Dũng</p>
+                                    <p class="mb-1">MSV: 21IT013</p><a href="https:/fb.com/trung181"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" viewBox="0 0 256 256" class="mr-3">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                                            </circle>
+                                            <path d="M168,88H152a23.9,23.9,0,0,0-24,24V224" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></path>
+                                            <line x1="96" y1="144" x2="160" y2="144" fill="none" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                                        </svg></a><a href="https://github.com/hoangtrung1801"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" viewBox="0 0 256 256" class="mr-3">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <path d="M84,240a23.9,23.9,0,0,0,24-24V168" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></path>
+                                            <path d="M172,240a23.9,23.9,0,0,1-24-24V168" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></path>
+                                            <path d="M152,168h16a23.9,23.9,0,0,1,24,24v8a23.9,23.9,0,0,0,24,24"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="16"></path>
+                                            <path d="M104,168H88a23.9,23.9,0,0,0-24,24v8a23.9,23.9,0,0,1-24,24"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="16"></path>
+                                            <path
+                                                d="M111.8,64A52,52,0,0,0,68,40a52,52,0,0,0-3.5,44.7A49.3,49.3,0,0,0,56,112v8a48,48,0,0,0,48,48h48a48,48,0,0,0,48-48v-8a49.3,49.3,0,0,0-8.5-27.3A52,52,0,0,0,188,40a52,52,0,0,0-43.8,24Z"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="16"></path>
+                                        </svg></a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                            height="30" fill="currentColor" viewBox="0 0 256 256" class="mr-3">
+                                            <rect width="256" height="256" fill="none"></rect>
+                                            <circle cx="128" cy="128" r="40" fill="none" stroke="currentColor"
+                                                stroke-miterlimit="10" stroke-width="16"></circle>
+                                            <rect x="36" y="36" width="184" height="184" rx="48" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="16"></rect>
+                                            <circle cx="180" cy="76" r="12"></circle>
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="is-flex is-justify-content-center is-align-items-center is-flex-direction-column has-text-centered has-text-weight-semibold">
+                        <p>Copyright © 2022 - Trường Đại học Công nghệ Thông tin &amp; Truyền Thông Việt - Hàn, Đại học
+                            Đà Nẵng</p>
+                        <p>Địa chỉ: 470 Đường Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng </p>
+                        <figure class="image mt-4" style="width: 40%;"><img src="/assets/vku.png" alt=""></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
